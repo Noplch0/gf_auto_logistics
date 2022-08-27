@@ -4,7 +4,15 @@ import cv2 as cv
 import os
 import subprocess
 import random
+import argparse
 
+#连接mumu模拟器
+opt=argparse.ArgumentParser()
+opt.add_argument('-a','--address',help='指定设备地址,默认mumu模拟器',default=r'127.0.0.1:7555')
+args=opt.parse_args()
+connect_command='adb connnect '+args.address
+os.system(connect_command)
+#打开样本图片
 sample=cv.imread("./sample.png")
 
 def clear_screen():
