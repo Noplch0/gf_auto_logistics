@@ -13,11 +13,17 @@
 
 # ***2.使用方法***
 
+打开你的模拟器
+
+运行.py文件
+
 `python ./auto_logistics.py`
 
 如果没有使用mumu模拟器则
 
 `python ./auto_logistics.py -a <IP>`
+
+ip是你的adb端口
 
 然后打开你的少前,停在主界面就行
 
