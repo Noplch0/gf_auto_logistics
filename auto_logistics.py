@@ -37,11 +37,11 @@ def compare(target,sample):
     if max_val>=0.95:
         clear_screen()
         print('找到目标')
-        sleep(2)
+        sleep(4)
         mat_top,mat_left=max_loc
         sp_h,sp_w,sp_ch=sample.shape
         bottom_right=(mat_top+sp_w,mat_left+sp_h)
-        cv.rectangle(target,(mat_top,mat_left),bottom_right,(31,30,51),1)
+        cv.rectangle(target,(mat_top,mat_left),bottom_right,(31,30,51),3)
         cv.imwrite('./outputs/testoutput.png',target)
         return True
     else:
@@ -49,7 +49,6 @@ def compare(target,sample):
         print('未找到目标,开始等待')
         return False
 
-#1289 759 843 565
 #1207 742 1371 777
 #760 531 906 570
 times=0
