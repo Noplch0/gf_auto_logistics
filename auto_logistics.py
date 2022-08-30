@@ -10,7 +10,7 @@ import argparse
 opt=argparse.ArgumentParser()
 opt.add_argument('-a','--address',help='指定设备地址,默认mumu模拟器',default=r'127.0.0.1:7555')
 args=opt.parse_args()
-connect_command='adb connnect '+args.address
+connect_command='adb connect '+args.address
 os.system(connect_command)
 #打开样本图片
 sample=cv.imread("./sample.png")
